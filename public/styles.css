@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 13px;
+    background-color: aliceblue;
+}
+
+.preview {
+    max-width: 1440px;
+    font-family: 'Lexend Deca', sans-serif;
+    padding: 100px;
+    margin-left: 210px;
+    margin-right: 210px;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 0;
+}
+
+main {
+    max-width: 1440px;
+}
+
+.card {
+    max-width: 250px;
+    padding: 30px;
+}
+
+.card__header {
+    font-family: 'Big Shoulders Display', cursive;
+    color: hsl(0, 0%, 95%);
+    letter-spacing: 1px;
+    margin-top: 60px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.card__btn {
+    margin-top: 90px;
+    margin-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 95%);
+}
+
+.card__text {
+    margin-top: 38px;
+    margin-right: 50px;
+    color: hsl(0, 0%, 95%);
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sedans {
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 15px 0 0 15px;
+    background-image: url(images/icon-sedans.svg);
+    background-repeat: no-repeat;
+    background-position: top 20px left 27px;
+}
+
+.suvs {
+    background-color: hsl(184, 100%, 22%);
+    background-image: url(images/icon-suvs.svg);
+    background-repeat: no-repeat;
+    background-position: top 20px left 27px;
+}
+
+.luxury {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 15px 15px 0;
+    background-image: url(images/icon-luxury.svg);
+    background-repeat: no-repeat;
+    background-position: top 20px left 27px;
+}
+
+.suvs .card__btn {
+    margin-top: 105px;
+}
+
+.sedans a {
+    color: hsl(31, 77%, 52%);
+}
+
+.suvs a {
+    color: hsl(184, 100%, 22%);
+}
+
+.luxury a {
+    color: hsl(179, 100%, 13%);
+}
+
+.attribution {
+    text-align: center;
+    margin-top: -50px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 13px;
+}
+
+/* 
+      //MEDIA QUERIES// */
+
+@media screen and (max-width: 375px) {
+    .preview {
+        width: 100%;
+        grid-template-columns: repeat(1fr);
+    }
+
+    .sedans {
+        grid-column: 1;
+        border-radius: 15px 15px 0 0;
+    }
+    
+    .suvs {
+        grid-column: 1;
+        grid-row: 2 / 3;
+    }
+    
+    .luxury {
+        grid-column: 1;
+        grid-row: 3 / 4;
+        border-radius: 0 0 15px 15px;
+    }
+
+}
